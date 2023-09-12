@@ -1,24 +1,9 @@
 <?php
 
-// Check PHP version.
-
-$minPhpVersion = '8.1'; 
-if (version_compare(PHP_VERSION, $minPhpVersion, '<')) {
-    $message = sprintf(
-        'Your PHP version must be %s or higher to run CodeIgniter. Current version: %s',
-        $minPhpVersion,
-        PHP_VERSION
-    );
-
-    exit($message);
-}
-
 define('FCPATH', __DIR__ . DIRECTORY_SEPARATOR);
 
 
 
-
-// Ensure the current directory is pointing to the front controller's directory
 chdir(FCPATH);
 
 require FCPATH . '../app/Config/Paths.php';
